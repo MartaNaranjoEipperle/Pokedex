@@ -128,7 +128,7 @@ function loadEvolutionChain(evolutionUrl, elementId) {
                 evolutionContainer.innerHTML = results.join('');
             });
         })
-        .catch(error => console.error('Fehler beim Abrufen der Evolutionskette:', error));
+        .catch(error => console.error('Error fetching the evolution chain:', error));
 }
 
 /**

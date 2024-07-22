@@ -1,7 +1,7 @@
 /**
  * Displays the login modal, updates favorite status and cards, and adds a resize listener.
  */
-function LogInUser() {
+function logInUser() {
     checkLogHeight();
     document.getElementById('loginModal').style.display = 'block';
     updateFavoriteStatus();
@@ -156,7 +156,7 @@ async function fetchAllUsersData() {
     let responseAll = await fetch(BASE_URL + '/.json');
     
     if (!response.ok) {
-        throw new Error('Fehler beim Abrufen der Benutzerdaten');
+        throw new Error('Error fetching user data');
     }
     
     return {
@@ -208,10 +208,10 @@ async function getUserData(username) {
                 return foundUser;
             } else {
                 showUserNotFoundMessage();
-                throw new Error('Benutzer nicht gefunden');
+                throw new Error('User not found');
             }
         } else {
-            throw new Error('Ungültige Datenstruktur in der Firebase');
+            throw new Error('Invalid data structure from Firebase');
         }
     } catch (error) {
         throw error;

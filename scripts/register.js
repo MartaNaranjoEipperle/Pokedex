@@ -74,7 +74,7 @@ function selectPokemon(url) {
 async function fetchUsersData() {
     const response = await fetch('https://pokedex-31d32-default-rtdb.europe-west1.firebasedatabase.app/users.json');
     if (!response.ok) {
-        throw new Error('Fehler beim Abrufen der Benutzerdaten');
+        throw new Error('Error fetching user data');
     }
     return await response.json();
 }
@@ -111,7 +111,7 @@ async function saveUserData(userData) {
         }
     });
     if (!response.ok) {
-        throw new Error('Fehler beim Speichern der Benutzerdaten');
+        throw new Error('Error saving user data');
     }
 }
 
@@ -207,7 +207,7 @@ async function saveUserData(userData) {
         let userIds = Object.keys(users).map(id => parseInt(id)).sort((a, b) => a - b);
         let newUserId = userIds.length > 0 ? Math.max(...userIds) + 1 : 0;
         let response = await putData("/users/" + newUserId, userData);
-        console.log("Benutzerdaten erfolgreich gespeichert in Firebase:", response);
+        console.log("User data successfully saved to Firebase:", response);
         userData.id = newUserId; 
         users[newUserId] = userData; 
         await putData("/users", users);
@@ -227,13 +227,13 @@ function errorMessage(type) {
 
     switch (type) {
         case 'emailExists':
-            output.innerHTML = '<p>Die E-Mail-Adresse ist bereits registriert. Bitte eine andere E-Mail-Adresse wählen.</p>';
+            output.innerHTML = '<p>The email address is already registered. Please choose a different email address.</p>';
             break;
         case 'usernameExists':
-            output.innerHTML = '<p>Der Benutzername ist bereits vergeben. Bitte einen anderen Benutzernamen wählen.</p>';
+            output.innerHTML = '<p>The username is already taken. Please choose a different username.</p>';
             break;
         default:
-            output.innerHTML = '<p>Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.</p>';
+            output.innerHTML = '<p>An error occurred. Please try again.</p>';
             break;
     }
 }

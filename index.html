@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="icon" type="image/x-png" href="img/pokefav.001.png">
+    <script src="./scripts/mini_backend.js"></script>
+    <script src="./script.js"></script>
+    <script src="./scripts/template.js"></script>
+    <script src="./scripts/big-card.js"></script>
+    <script src="./scripts/card-info.js"></script>
+    <script src="./scripts/search.js"></script>
+    <script src="./scripts/loading-spinner.js"></script>
+    <script src="./scripts/register.js"></script>
+    <script src="./scripts/log-in-out.js"></script>
+    <script src="./scripts/favorite.js"></script>
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="init()">
+
+    <div class="header" id="header">
+        <img src="img/poke.png" class="pokeImg" alt="">
+        <div id="search">
+            <input type="text" id="searchBar" placeholder="Search for Pokémon...">
+            <div id="user" class="user" onclick="LogInUser()"></div>
+        </div>
+    </div>
+    <div id="alert" class="alert-div none">Please rotate your device to view the card.</div>
+    <div id="cards"></div>
+    <div id="loadingSpinner"></div>
+    <button onclick="getMore()" id="more">More</button>
+    <div id="front" class="none"></div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="loginForm" class="centerForm">
+                <h2>Login</h2>
+                <div class="input-line">
+                    <span class="icon"><i class="fa-regular fa-envelope"></i></span>
+                    <input type="user-name" name="user-name" id="input-name" placeholder="Name" required
+                        onfocus="hideOnFocus()">
+                </div>
+                <div class="input-line">
+                    <span class="icon" id="pass-eye" onclick="togglePassword()"><i
+                            class="fa-solid fa-eye-slash"></i></span>
+                    <input type="password" name="password" id="input-password" placeholder="Password" required
+                        onfocus="hideOnFocus()">
+                </div>
+                <div id="message-box" class="dis-none"></div>
+                <div class="side">
+                    <div>
+                        <a class="none">Forgot my password</a>
+                    </div>
+                    <button onclick="login()">Login</button>
+                    <p>Or <a href="#" onclick="showRegisterForm()">register here</a></p>
+                </div>
+            </div>
+            <div id="registerForm" style="display: none;">
+                <div class="centerForm">
+                    <h2>Register</h2>
+                    <div class="side">
+                        <label for="newUsername">Username:</label>
+                        <input type="text" id="newUsername" name="newUsername" required>
+                        <label for="newPassword">Password:</label>
+                        <input type="password" id="newPassword" name="newPassword" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div id="userExist"></div>
+                    <h3>Select a Pokémon for your profile picture:</h3>
+                    <div id="pokemonSelection"></div>
+                </div>
+                <button onclick="register()">Register</button>
+                <button onclick="loginAgain()">Login</button>
+            </div>
+            <div id="favoriteForm" style="display: none;">
+                <div>
+                    <div class="bye" id="bye"></div>
+                    <div class="greetings" id="greetings"><div id="time">Hello </div><div class="together"><div id="loggedUserName" class="p15">X</div>!</div><div id="logout" onclick="logout()"><div class="border-text">Logout</div></div></div>
+                    <div>
+                        Hier are your favorite Pokemons:
+                    </div>
+                    <div id="favoritePokemons" class="favoriteContainer"></div>
+                </div>
+            </div>
+        </div>
+
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>

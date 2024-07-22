@@ -1,0 +1,215 @@
+@media only screen and (max-height: 765px) {
+    .modal-content {
+        overflow: auto;
+    }
+
+    .modal-content::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 690px){
+    .modal-content {
+        top: 310px!important;
+    }
+
+    .favoriteContainer {
+        max-height: 255px!important;
+    }
+}
+
+@media only screen and (max-height: 560px){
+    .greetings {
+        font-size: 28px !important;
+    }
+
+    .bye {
+        font-size: 28px !important;
+    }
+
+    .modal-content {
+        top: 281px !important;
+    }
+
+    #logout {
+        padding-left: 239px!important;
+        margin-top: 6px!important;
+    }
+
+    .favoriteContainer {
+        max-height: 175px!important;
+    }
+}
+
+@media only screen and (max-height: 440px){
+    .greetings {
+        flex-direction: row !important;
+    }
+    .modal-content {
+        min-width: 400px !important;
+        max-height: 160px !important;
+        top: 236px !important;
+    }
+    
+
+    #logout {
+        padding-left: 239px!important;
+        margin-top: 6px!important;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    #logout { 
+        padding-left: 18%!important; 
+    }
+}
+
+@media only screen and (max-width: 1260px) {
+    #logout { 
+        position: absolute;
+        padding-left: 390px !important;
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {  
+    .greetings{
+        flex-direction: column!important;
+        align-items: start!important;
+    }
+
+    #logout {
+        padding-left: 266px!important;
+        margin-top: 48px;
+    }
+}
+
+@media only screen and (max-width: 800px) {  
+    #search { 
+        padding-right: 20px!important; 
+    }
+
+    .pokeImg {
+        padding-left: 20px!important;
+    }
+}
+
+@media only screen and (max-width: 705px) {
+    #favoriteForm{
+        max-width: 453px;
+    }
+
+    #logout{
+        padding-left: 245px !important;
+        margin-top: 51px;
+    }
+
+    .favoriteContainer{
+        margin-top: 10px;
+    }
+
+    .border-text{
+        font-size: 23px;
+    }
+    
+}
+
+@media only screen and (max-width: 505px) {
+    .favoriteContainer {
+        width: 314px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header {
+        flex-direction: column!important;;
+        justify-content: center!important;;
+    }
+    
+    #search { 
+        padding-right: 0px!important; 
+    }
+
+    .pokeImg {
+        padding-left: 0px!important;
+    }
+
+    #cards{
+        top: 195px!important;
+    }
+
+    #more{
+        margin-left: 0!important;
+    }
+
+    #loadingSpinner {
+        margin-left: 0%!important;
+    }
+
+    .modal-content {
+        top: 450px!important;
+    }
+
+    .modal-content::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 465px) {
+    .next {
+        font-size: 13px!important;
+        width: 28px !important;
+        height: 59px !important;
+        display: flex!important;
+        align-items: center!important;
+    }
+    .modal-content {
+        width: 250px!important;
+        min-width: 250px!important;
+    }
+
+    .favoriteContainer {
+        width: 242px!important;
+    }
+
+    .greetings {
+        font-size: 28px!important;
+    }
+
+    .bye {
+        font-size: 28px !important;
+    }
+
+    .border-text {
+        font-size: 16px!important;
+        padding: 3px!important;
+    }
+
+    #logout{
+        padding-left: 167px!important;
+        margin-top: 32px!important;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .modal-content {
+        top: 453px !important;
+    }
+
+    .favoriteContainer {
+        max-height: 293px;
+    }
+}
+
+@media only screen and (max-height: 685px) and (max-width: 400px)  {
+    .modal-content {
+        top: 366px!important;
+    }
+}

@@ -21,7 +21,7 @@ This web application allows users to manage their favorite Pokémon. Users can l
 
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/yourusername/pokemon-favorites.git
+    git clone https://github.com/yourusername/pokedex.git
     cd pokemon-favorites
     ```
 
